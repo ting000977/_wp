@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>個人網站</title>
+  <style>
+    body { font-family: "微軟正黑體", sans-serif; padding: 30px; }
+    h1 { color: #333; }
+  </style>
+</head>
+<body>
+  <h1>個人網站</h1>
+  <div id="content">載入中...</div>
+
+  <script>
+    const person = {
+      name: "陳衍廷",
+      age: 25,
+      gender: "男"
+    };
+
+    function showContent(path) {
+      const contentDiv = document.getElementById("content");
+      switch (path) {
+        case "/name":
+          contentDiv.textContent = `姓名：${person.name}`;
+          break;
+        case "/age":
+          contentDiv.textContent = `年齡：${person.age}`;
+          break;
+        case "/gender":
+          contentDiv.textContent = `性別：${person.gender}`;
+          break;
+        default:
+          contentDiv.textContent = "歡迎來到個人網站！請在網址列輸入 /name、/age 或 /gender 查看資訊。";
+      }
+    }
+
+    showContent(window.location.pathname);
+  </script>
+</body>
+</html>
