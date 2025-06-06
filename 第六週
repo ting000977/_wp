@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>新增貼文範例</title>
+  <style>
+    body { font-family: "微軟正黑體", sans-serif; padding: 20px; }
+    .post { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    button { margin-bottom: 20px; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+
+  <h1>貼文列表</h1>
+  <button id="addPostsBtn">新增三筆貼文</button>
+  <div id="postsContainer"></div>
+
+  <script>
+    const posts = [
+      "這是第一則貼文，歡迎大家留言！",
+      "第二則貼文，分享今天的心情。",
+      "第三則貼文，感謝大家的支持！"
+    ];
+
+    const container = document.getElementById("postsContainer");
+    const btn = document.getElementById("addPostsBtn");
+
+    btn.addEventListener("click", () => {
+      // 清空舊貼文（如果想累加，可以移除這行）
+      container.innerHTML = "";
+
+      posts.forEach(text => {
+        const div = document.createElement("div");
+        div.className = "post";
+        div.textContent = text;
+        container.appendChild(div);
+      });
+    });
+  </script>
+
+</body>
+</html>
