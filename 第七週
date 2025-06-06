@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog 貼文時間示範</title>
+  <style>
+    body { font-family: "微軟正黑體", sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    .post { border-bottom: 1px solid #ddd; padding: 15px 0; }
+    .title { font-size: 1.3em; font-weight: bold; }
+    .time { font-size: 0.85em; color: #888; margin-top: 5px; }
+    .content { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>最新貼文</h1>
+
+  <div class="post">
+    <div class="title">我的第一篇貼文</div>
+    <div class="time">發布時間：2025-06-05 14:30</div>
+    <div class="content">這是貼文的內容，歡迎留言討論。</div>
+  </div>
+
+  <div class="post">
+    <div class="title">程式設計學習心得</div>
+    <div class="time">發布時間：2025-06-06 10:15</div>
+    <div class="content">今天學到了很多 JavaScript 基礎語法，很有成就感！</div>
+  </div>
+
+</body>
+</html>
